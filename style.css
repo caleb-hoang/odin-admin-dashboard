@@ -64,6 +64,7 @@ html, body {
     display:grid;
     grid-template-columns: 2fr 1fr;
     justify-content:space-between;
+    gap: 15%;
     background-color:blanchedalmond;
 }
 
@@ -83,16 +84,32 @@ html, body {
     border-radius: 10px;
 }
 
+
 #searchbox img {
     height: 5vh;
 }
 
+
 #identifiers {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    gap: 5%;
     background-color: rgb(240, 183, 163);
 }
 
+#identifiers img {
+    height:5vh;
+    width:5vh;
+}
+
+.icon {
+    background-color:white;
+    border-radius: 50px;
+}
+
 #mini-profile {
-    
     background-color: rgb(210, 184, 235);
 }
 
