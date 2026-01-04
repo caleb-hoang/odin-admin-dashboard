@@ -5,6 +5,7 @@ html, body {
     padding: 0px;
 
     font-family:sans-serif;
+    box-sizing:border-box;
 }
 
 .container {
@@ -52,13 +53,15 @@ html, body {
 }
 
 #topbar {
+    
+    contain:layout;
     grid-column:2 / 3;
     grid-row:1/2;
 
     display:grid;
     grid-template-rows: 1fr 1fr;
     background-color:rgb(217, 177, 255);
-}
+} 
 
 #search {
     display:grid;
@@ -66,6 +69,7 @@ html, body {
     justify-content:space-between;
     gap: 15%;
     background-color:blanchedalmond;
+    
 }
 
 #searchbox {
@@ -84,33 +88,78 @@ html, body {
     border-radius: 10px;
 }
 
-
 #searchbox img {
-    height: 5vh;
+    object-fit:contain;
+    height: 2vw;
+    width:auto;
 }
-
 
 #identifiers {
     display:flex;
     flex-direction:row;
     align-items:center;
     justify-content:center;
-    gap: 5%;
+    gap: 8%;
     background-color: rgb(240, 183, 163);
 }
 
 #identifiers img {
-    height:5vh;
-    width:5vh;
+    height:4vh;
+    width:auto;
 }
 
-.icon {
+#identifiers .icon {
     background-color:white;
     border-radius: 50px;
 }
 
 #mini-profile {
+    display:flex;
+    grid-template-columns: 1fr 1fr;
     background-color: rgb(210, 184, 235);
+    justify-content:space-between;
+    align-items:center;
+    padding-left: 1%;
+    gap:5%
+}
+
+
+#greeting {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items:center;
+    gap: 10px;
+    row-gap: 0px;
+}
+
+
+#greeting > .icon {
+    grid-column: 1 / 2;
+    grid-row: 1/3;
+    height: 8vh;
+    background-color: white;
+    border-radius: 50%;
+    
+}
+
+#buttons {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color:darkseagreen;
+    height:100%;
+    width:clamp(40vw, 40%, 70vw);
+    align-items:center;
+}
+
+.button {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-color: aqua;
+    width: 6vw;
+    height: 6vh;
+    border-radius: 22%;
 }
 
 #content {
@@ -124,6 +173,42 @@ html, body {
 
 #projects {
     background-color:rgb(231, 177, 177);
+    display:flex;
+    flex-direction:column;
+    padding: 20px;
+}
+
+#cards {
+    
+    display:grid;
+    grid-template-columns: repeat(auto-fit, 35vh);
+    gap: 70px;
+}
+
+.card {
+    display:flex;
+    justify-content:end;
+    background-color: darkslategray;
+    height: 25vh;
+    aspect-ratio: 16 / 10;
+}
+
+.card-content {
+    background-color:rgb(163, 157, 200);
+    height:25vh;
+    aspect-ratio: 15/10;
+}
+
+.card-title {
+
+}
+
+.card-text {
+
+}
+
+.card-icons {
+
 }
 
 #news {
