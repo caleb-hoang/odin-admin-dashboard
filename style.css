@@ -212,5 +212,31 @@ html, body {
 }
 
 #news {
+    padding: 4%;
+    display:grid;
+    grid-template-rows: 1fr 1fr;
     background-color:rgb(159, 250, 250);
+    gap: 2%;
+}
+
+#timeline {
+    height: 100%;
+    width:auto;
+
+    background-color:rgb(204, 252, 204)
+}
+
+.timeline-item {
+
+}
+
+#followers {
+    height:auto;
+    width: auto;
+
+    background-color:rgb(190, 121, 224)
+}
+
+.follower {
+    
 }
